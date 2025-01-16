@@ -74,19 +74,19 @@
 
     </div>
 
-    <form action="php/mail.php" method="post">
+    <form action="https://formspree.io/f/xwppzjgr" method="post">
 
         <div class="inputBox">
-            <input type="text" name="fname" placeholder="Your name">
-            <input type="number" name="phone" placeholder="Your number">
+            <input type="text" name="fname" placeholder="Your name" required>
+            <input type="number" name="phone" placeholder="Your number" required>
         </div>
 
         <div class="inputBox">
-            <input type="email" name="email" placeholder="Your email">
-            <input type="text" name="subject" placeholder="Your subject">
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="subject" placeholder="Your subject" required>
         </div>
 
-        <textarea name="message" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+        <textarea name="message" placeholder="Your message" id="" cols="30" rows="10" required></textarea>
 
         <input type="submit" value="Send Message" class="btn">
 
