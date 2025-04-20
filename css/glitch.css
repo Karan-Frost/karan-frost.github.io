@@ -1,0 +1,183 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.glitch-container {
+  text-align: center;
+  position: relative;
+}
+
+.glitch {
+  font-size: 3rem;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  animation: flicker 1s infinite alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 9999px, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #f0f;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitchBot 2s infinite linear alternate-reverse;
+  color: #0ff;
+  z-index: -2;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+input {
+  margin-top: 1rem;
+  background: black;
+  color: lime;
+  border: none;
+  border-bottom: 1px solid lime;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(10px, 9999px, 40px, 0); }
+  20% { clip: rect(20px, 9999px, 60px, 0); }
+  30% { clip: rect(5px, 9999px, 30px, 0); }
+  50% { clip: rect(15px, 9999px, 70px, 0); }
+  70% { clip: rect(30px, 9999px, 50px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBot {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(30px, 9999px, 50px, 0); }
+  20% { clip: rect(50px, 9999px, 90px, 0); }
+  40% { clip: rect(70px, 9999px, 110px, 0); }
+  60% { clip: rect(60px, 9999px, 80px, 0); }
+  80% { clip: rect(20px, 9999px, 40px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@media (min-width: 768px) {
+  .glitch {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .glitch {
+    font-size: 5rem;
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.input-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.terminal-input {
+  margin-top: 20px;
+  background: black;
+  color: lime;
+  border: none;
+  border-bottom: 1px solid lime;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  padding: 10px;
+  width: 300px;
+}
+
+.terminal-output {
+  margin-top: 20px;
+  color: lime;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.glitch-container {
+  text-align: center;
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+.terminal-output {
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: monospace;
+  padding: 10px;
+}
+
+.glitch-effect {
+  animation: glitch-flicker 0.3s infinite;
+  background: repeating-linear-gradient(
+    0deg,
+    #000,
+    #000 1px,
+    #111 1px,
+    #111 2px
+  );
+  background-size: 100% 2px;
+}
+
+@keyframes glitch-flicker {
+  0% { filter: brightness(1); }
+  20% { filter: brightness(1.1) contrast(1.2); }
+  40% { filter: brightness(0.8); transform: translateX(-1px); }
+  60% { filter: brightness(1.2); transform: translateX(1px); }
+  80% { filter: brightness(0.9) contrast(1.1); }
+  100% { filter: brightness(1); transform: translateX(0); }
+}
+
+.terminal-whispers {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #00ffff;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
