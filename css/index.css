@@ -124,21 +124,6 @@ html {
   margin-bottom: 30px;
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 8px;
-  margin-right: 10px;
-  margin-bottom: 16px;
-  color: #00ffee;
-  text-decoration: underline;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.project-link:hover {
-  transform: scale(1.1);
-  color: #ff0077;
-}
-
 .scroll-dots {
   position: fixed;
   left: 20px;
@@ -161,6 +146,41 @@ html {
   color: #ff0077;
 }
 
+#skills {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skill-item span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -180,31 +200,6 @@ html {
 .contact-link:hover {
   transform: scale(1.1);
   color: #ff0077;
-}
-
-#other-websites {
-  margin-top: 40px;
-  text-align: center;
-}
-
-#other-websites h2 {
-  color: #00ffea;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.website-link {
-  display: inline-block;
-  margin: 10px;
-  font-size: 1.2rem;
-  color: #00ffea;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.website-link:hover {
-  color: #ff0077;
-  transform: scale(1.1);
 }
 
 .license-link {
