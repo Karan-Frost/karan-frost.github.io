@@ -1,112 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frost // Cyberpunk</title>
-  <link href="images/favi-icon/frost.png" rel="icon">
-  <link href="images/favi-icon/frost-icon.png" rel="frost-icon">
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Frost's Terminal</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="flicker-bg">
-  <section class="hero" data-aos="fade-up">
-    <p class="prompt">frost@cyber:~$ whoami</p>
-    <h1 class="glow">A Custom ROM Developer Who Has Interest In Web Designing.</h1>
-    <p class="sub">Scroll or type ↓</p>
-  </section>
-
-  <div class="scroll-dots">
-    <div class="dot" data-target="#about">.</div>
-    <div class="dot" data-target="#projects">.</div>
-    <div class="dot" data-target="#skills">.</div>
-    <div class="dot" data-target="#contact">.</div>
-  </div>
-
-  <section id="about" data-aos="fade-up">
-    <h2>About</h2>
-    <p>
-      I am Frost, a custom ROM developer, interested in web designing as well.
-    </p>
-  </section>
-
-  <section id="projects" class="projects-section" data-aos="fade-up">
-    <h2>My Projects</h2>
-
-    <div class="project-item">
-        <h3>VoltageOS</h3>
-        <p>I maintain VoltageOS for veux and violet.</p>
-    </div>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>My Skills</h2>
-    <div class="skill-grid">
-      <div class="skill-item">
-        <img src="images/skills/icon-bash.png" alt="Bash">
-        <span>Bash</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-css.png" alt="CSS3">
-        <span>CSS3</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-git.png" alt="Git">
-        <span>Git</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-html.png" alt="HTML5">
-        <span>HTML5</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-java.png" alt="Java">
-        <span>Java</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-javascript.png" alt="JavaScript">
-        <span>JavaScript</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/skills/icon-python.png" alt="Python">
-        <span>Python</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" data-aos="fade-up">
-    <h2>My Socials</h2>
-
-    <div class="contact-links">
-        <a href="mailto:frost.github@proton.me" target="_blank" class="contact-link">
-          <i class="fa-solid fa-envelope contact-icon"></i>
+<body>
+    <header class="header-flex">
+        <div class="header-text">
+            <h1>frost@terminal ~</h1>
+            <p>// coder | explorer | builder</p>
+        </div>
+        <a href="https://github.com/Karan-Frost" target="_blank">
+            <img src="images/profile.png" alt="Frost" class="profile-pic">
         </a>
-        <a href="https://github.com/Karan-Frost" target="_blank" class="contact-link">
-          <i class="fab fa-github contact-icon"></i>
-        </a>
-        <a href="https://gitlab.com/Karan-Frost" target="_blank" class="contact-link">
-          <i class="fab fa-gitlab contact-icon"></i>
-        </a>
-        <a href="https://t.me/Under_Frost" target="_blank" class="contact-link">
-          <i class="fab fa-telegram-plane contact-icon"></i>
-        </a>
-        <a href="https://discord.com/users/590779670581084162" target="_blank" class="contact-link">
-          <i class="fab fa-discord contact-icon"></i>
-        </a>
-    </div>
-  </section>
+    </header>
 
-  <section class="enter-glitch" data-aos="fade-up">
-    <button onclick="window.location.href='glitch.html'">frost@cyber:~$ cd glitch_world</button>
-  </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#github">GitHub</a>
+        <a href="#donations">Donations</a>
+    </nav>
 
-  <section id="copyright" data-aos="fade-up">
-    <p>&copy; 2025 Frost.</p>
-    <p>Licensed Under <a href="https://github.com/Karan-Frost/karan-frost.github.io/blob/main/LICENCE" target="_blank" class="license-link">CC BY 4.0</a>.</p> 
-  </section>
+    <div class="container" id="content"></div>
 
-  <script src="js/scroll.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="js/AOS.js"></script>
+    <footer>
+        Crafted by Frost | 2025 |
+        Licensed Under <a href="https://github.com/Karan-Frost/karan-frost.github.io/blob/main/LICENCE" target="_blank">CC BY 4.0</a>
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>

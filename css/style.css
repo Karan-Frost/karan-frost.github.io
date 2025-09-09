@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-color: #0A0A0A;
+    color: #CCCCCC;
+    font-family: 'Fira Code', monospace, monospace;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00A8FF;
+    display: block;
+    margin-left: 20px;
+}
+
+header h1 {
+    color: #00A8FF;
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #1E90FF;
+    font-size: 1.1em;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #00A8FF;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    background-color: #111111;
+    border-left: 4px solid #00A8FF;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.section:hover {
+    background-color: #1A1A1A;
+    transform: translateX(5px);
+}
+
+.section h2 {
+    color: #1E90FF;
+    font-size: 1.4em;
+    margin-bottom: 12px;
+}
+
+.section pre {
+    background-color: #0A0A0A;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 1em;
+    color: #CCCCCC;
+    white-space: pre-wrap;
+    animation: typing 2s steps(30, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666666;
+    font-size: 0.9em;
+}
+
+.section a {
+    color: #00A8FF;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.copy-btn {
+    cursor: pointer;
+    text-decoration: underline;
+}
